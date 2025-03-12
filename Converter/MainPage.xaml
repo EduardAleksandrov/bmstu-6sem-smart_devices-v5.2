@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Converter.MainPage"
+             Padding="20, 10, 10, 10">
+
+    <StackLayout Padding="10">
+        <Entry x:Name="textInput"
+               Keyboard="Numeric"
+               Placeholder="Введите расстояние"
+               TextChanged="OnPickerSelectedIndexChanged"/>
+        <Label Text="Выберите элемент (из чего)" />
+        <Picker x:Name="myPicker1"
+                Title="Выберите элемент"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Метры</x:String>
+                    <x:String>Километры</x:String>
+                    <x:String>Мили</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="Выберите элемент (во что)" />
+        <Picker x:Name="myPicker2"
+                Title="Выберите элемент"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Метры</x:String>
+                    <x:String>Километры</x:String>
+                    <x:String>Мили</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label x:Name="selectedStateLabel" 
+               Text="" 
+               FontSize="Large"
+               TextColor="Green"
+               />
+    </StackLayout>
+
+</ContentPage>
