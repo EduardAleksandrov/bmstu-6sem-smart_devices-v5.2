@@ -46,5 +46,9 @@ namespace Converter
                 selectedStateLabel.Text = "Пожалуйста, введите корректное число.";
             }
         }
+        private async void OnCalculateClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Calculator());
+        }
     }
 }

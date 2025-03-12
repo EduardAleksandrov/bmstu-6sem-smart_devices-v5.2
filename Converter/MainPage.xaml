@@ -5,6 +5,9 @@
              Padding="20, 10, 10, 10">
 
     <StackLayout Padding="10">
+        <Label Text="Конвертер расстояний" 
+               FontSize="Large"
+               TextColor="Green"/>
         <Entry x:Name="textInput"
                Keyboard="Numeric"
                Placeholder="Введите расстояние"
@@ -38,6 +41,15 @@
                FontSize="Large"
                TextColor="Green"
                />
+        <Button x:Name="calculateButton"
+                Text="Перейти к калькулятору"
+                BackgroundColor="DodgerBlue"
+                TextColor="White"
+                FontSize="Medium"
+                Padding="10"
+                Margin="10"
+                CornerRadius="5"
+                Clicked="OnCalculateClicked" />
     </StackLayout>
 
 </ContentPage>
